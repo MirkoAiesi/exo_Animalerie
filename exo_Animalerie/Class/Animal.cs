@@ -12,4 +12,17 @@ public abstract class Animal
     public int TauxDeces { get; set; }
 
     public abstract void Crier();
+
+    public Animal(string nom, double poid, double taille, string sexe, int age, int ageHumain, DateTime dateArrive, int tauxDeces)
+    {
+        Nom = nom;
+        Poid = poid;
+        Taille = taille;
+        Sexe = sexe;
+        Age = age;
+        AgeHumain = ageHumain;
+        DateArrive = dateArrive;
+        TauxDeces = tauxDeces;
+
+    }
 }

@@ -9,6 +9,7 @@ public abstract class Animal
     public int Age { get; set; }
     public int AgeHumain { get; set; }
     public DateTime DateArrive { get; set; }
+    public int TauxDeces { get; set; }
 
     public abstract string Crier();
 }

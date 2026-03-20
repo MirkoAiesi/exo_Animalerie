@@ -11,6 +11,6 @@ public enum EnumCouleurOiseau
 
 public enum EnumHabitat
 {
-    voilière,
+    volière,
     cage
 }

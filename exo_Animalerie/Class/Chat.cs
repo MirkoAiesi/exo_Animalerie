@@ -9,8 +9,9 @@ public class Chat : Animal
     
     
     
-    public override string Crier()
+    public override void Crier()
     {
-        throw new NotImplementedException();
+        Console.WriteLine("Miaou Miaou");
+        return;
     }
 }

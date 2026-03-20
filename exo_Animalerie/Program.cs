@@ -13,3 +13,4 @@ animalerie.AddAnimal(chat);
 animalerie.AddAnimal(oiseau);
 animalerie.CountAnimal();
 animalerie.ShowAnimal();
+animalerie.CheckNight();

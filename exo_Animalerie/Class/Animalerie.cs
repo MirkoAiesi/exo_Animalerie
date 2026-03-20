@@ -1,7 +1,7 @@
 ﻿namespace exo_Animalerie;
-
 public class Animalerie
 {
+    private Random random = new Random();
     private List<Animal> Liste = new List<Animal>();
     public int NbrChien { get; set; }
     public int NbrChat { get; set; }
@@ -52,6 +52,48 @@ public class Animalerie
         Console.WriteLine($"Il ya {NbrChien} chien");
         Console.WriteLine($"Il ya {NbrChat} chat");
         Console.WriteLine($"Il ya {NbrOiseau} oiseau");
+    }
+
+    public void CheckNight()
+    {
+        foreach (Animal animal in Liste)
+        {
+            switch (animal)
+            {
+                case Chien c:
+                    if (c.TauxDeces < random.Next(0, 100))
+                    {
+                        Console.WriteLine($"{c.Nom} à bien passé la nuit");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"{c.Nom} est malheureusement décéder cette nuit");
+                    }
+                    break;
+                case Chat ca:
+                    if (ca.TauxDeces < random.Next(0, 100))
+                    {
+                        Console.WriteLine($"{ca.Nom} à bien passé la nuit");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"{ca.Nom} est malheureusement décéder cette nuit");
+                    }
+                    break;
+                case Oiseau o:
+                    if (o.TauxDeces < random.Next(0, 100))
+                    {
+                        Console.WriteLine($"{o.Nom} à bien passé la nuit");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"{o.Nom} est malheureusement décéder cette nuit");
+                    }
+                    break;
+                
+            }
+        }
+        
     }
     
 }

@@ -6,13 +6,8 @@ public class Oiseau : Animal
     public string Couleur { get; set; }
     public string Habitat { get; set; }
     
-    
-    
-    
-    
-    
-    public override string Crier()
+    public override void Crier()
     {
-        throw new NotImplementedException();
+        Console.WriteLine("Piou Piou");
     }
 }

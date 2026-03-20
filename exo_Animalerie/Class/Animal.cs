@@ -11,5 +11,5 @@ public abstract class Animal
     public DateTime DateArrive { get; set; }
     public int TauxDeces { get; set; }
 
-    public abstract string Crier();
+    public abstract void Crier();
 }

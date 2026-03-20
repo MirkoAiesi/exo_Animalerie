@@ -5,11 +5,13 @@ namespace exo_Animalerie;
 
 public class Chien : Animal
 {
-    public Chien(string nom, double poid, double taille, string sexe, int age, int ageHumain, DateTime dateArrive, int tauxDeces, EnumCollier couleurCollier, string dresser, EnumRace race) : base(nom, poid, taille, sexe, age, ageHumain, dateArrive, tauxDeces)
+    public Chien(string nom, double poid, double taille, string sexe, int age, DateTime dateArrive, EnumCollier couleurCollier, string dresser, EnumRace race) : base(nom, poid, taille, sexe, age, dateArrive)
     {
         CouleurCollier = couleurCollier;
         Dresser = dresser;
         Race = race;
+        TauxDeces = 1;
+        AgeHumain = ToAgeHumain();
     }
 
     public EnumCollier CouleurCollier { get; set; }
@@ -20,4 +22,10 @@ public class Chien : Animal
         Console.WriteLine("Wouf wouf");
         return;
     }
+
+    public override int ToAgeHumain()
+    {
+        return Age * 7;
+    }
+    
 }

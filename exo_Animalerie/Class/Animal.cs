@@ -9,20 +9,20 @@ public abstract class Animal
     public int Age { get; set; }
     public int AgeHumain { get; set; }
     public DateTime DateArrive { get; set; }
-    public int TauxDeces { get; set; }
+    public double TauxDeces { get; set; }
 
     public abstract void Crier();
 
-    public Animal(string nom, double poid, double taille, string sexe, int age, int ageHumain, DateTime dateArrive, int tauxDeces)
+    public Animal(string nom, double poid, double taille, string sexe, int age, DateTime dateArrive)
     {
         Nom = nom;
         Poid = poid;
         Taille = taille;
         Sexe = sexe;
         Age = age;
-        AgeHumain = ageHumain;
         DateArrive = dateArrive;
-        TauxDeces = tauxDeces;
-
     }
+
+    public abstract int ToAgeHumain();
+
 }

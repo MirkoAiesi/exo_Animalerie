@@ -2,10 +2,12 @@
 
 public class Oiseau : Animal
 {
-    public Oiseau(string nom, double poid, double taille, string sexe, int age, int ageHumain, DateTime dateArrive, int tauxDeces, string couleur, string habitat) : base(nom, poid, taille, sexe, age, ageHumain, dateArrive, tauxDeces)
+    public Oiseau(string nom, double poid, double taille, string sexe, int age, DateTime dateArrive, string couleur, string habitat) : base(nom, poid, taille, sexe, age, dateArrive)
     {
         Couleur = couleur;
         Habitat = habitat;
+        TauxDeces = 3;
+        AgeHumain = ToAgeHumain();
     }
 
     public string Couleur { get; set; }
@@ -14,5 +16,10 @@ public class Oiseau : Animal
     public override void Crier()
     {
         Console.WriteLine("Piou Piou");
+    }
+
+    public override int ToAgeHumain()
+    {
+        return Age * 5;
     }
 }
